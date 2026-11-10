@@ -1,52 +1,51 @@
-# NETWORKWALKS-OUATTARA_CHEICK-B083-WK2-CYBERSECURITY-RECON
-# 🛡️ Network Reconnaissance & Vulnerability Assessment (Week 2)
+# 🛡️ Reconnaissance Réseau & Évaluation des Vulnérabilités (Semaine 2)
 
-Comprehensive passive and active reconnaissance of the target `networkwalks.com` and local network mapping.
+Reconnaissance passive et active complète de la cible `networkwalks.com` et cartographie du réseau local.
 
-## 📌 Project Overview
-This project focuses on executing active and passive reconnaissance techniques using native Kali Linux tools, Zenmap network scanning, and Google Hacking Database (GHDB) operators to evaluate target attack surfaces safely and effectively.
-
----
-
-## 🛠️ Module 1: CLI Reconnaissance (W2-PM1)
-Execution of 6 essential reconnaissance commands against `networkwalks.com`:
-
-* **WHOIS (`whois networkwalks.com`):** Domain registered via GoDaddy, hosted on HostGator Name Servers (`NS6135.HOSTGATOR.COM`).
-* **WhatWeb (`whatweb networkwalks.com`):** Identified Apache web server, WordPress CMS, Bootstrap 7.1.4, and jQuery 3.7.1.
-* **NSLookup (`nslookup networkwalks.com`):** Resolved target domain to IP address `192.232.216.135` using DNS `8.8.8.8`.
-* **Curl (`curl -I https://networkwalks.com`):** Retrieved HTTP/2 200 OK headers, active REST API (`/wp-json/`), and Nginx caching headers.
-* **Wafw00f (`wafw00f networkwalks.com`):** Successfully detected Web Application Firewall protection: **ModSecurity (SpiderLabs) WAF**.
-* **DNSRecon (`dnsrecon -d networkwalks.com`):** Extracted SOA records, MX mail servers, SPF rules, and cPanel SRV service records.
-
-*(Insérer ici vos captures d'écran de W2-PM1)*
+## 📌 Aperçu du Projet
+Ce projet se concentre sur l'exécution de techniques de reconnaissance active et passive à l'aide des outils natifs de Kali Linux, du scan réseau Zenmap et des opérateurs du Google Hacking Database (GHDB) afin d'évaluer la surface d'attaque de la cible en toute sécurité.
 
 ---
 
-## 🌐 Module 2: Network Discovery with Zenmap (W2-PM5)
-Local network scanning using Zenmap GUI on Windows host environment:
+## 🛠️ Module 1: Reconnaissance CLI (W2-PM1)
+Exécution de 6 commandes essentielles de reconnaissance contre `networkwalks.com` :
 
-* **Host IP Address:** `10.20.142.215`
-* **Scanned Subnet:** `10.20.142.0/24`
-* **Command Executed:** `nmap -sn 10.20.142.0/24` (Ping Scan)
-* **Results:** 1 live host identified (`10.20.142.215`). Topology map generated and exported to `Zenmap1.pdf`.
+* **WHOIS (`whois networkwalks.com`) :** Domaine enregistré via GoDaddy, hébergé sur les serveurs de noms HostGator (`NS6135.HOSTGATOR.COM`).
+* **WhatWeb (`whatweb networkwalks.com`) :** Identification du serveur web Apache, CMS WordPress, Bootstrap 7.1.4 et jQuery 3.7.1.
+* **NSLookup (`nslookup networkwalks.com`) :** Résolution du domaine cible vers l'adresse IP `192.232.216.135` via le DNS `8.8.8.8`.
+* **Curl (`curl -I https://networkwalks.com`) :** En-têtes HTTP/2 200 OK récupérés, API REST active (`/wp-json/`) et en-têtes de mise en cache Nginx.
+* **Wafw00f (`wafw00f networkwalks.com`) :** Détection réussie du Pare-feu Applicatif Web (WAF) : **ModSecurity (SpiderLabs) WAF**.
+* **DNSRecon (`dnsrecon -d networkwalks.com`) :** Extraction des enregistrements SOA, serveurs de messagerie MX, règles SPF et enregistrements de service SRV cPanel.
 
-*(Insérer ici vos captures d'écran de Zenmap)*
+*(Voir Module1_W2-PM1)*
+
+---
+
+## 🌐 Module 2: Découverte Réseau avec Zenmap (W2-PM5)
+Scan du réseau local via l'interface graphique Zenmap sous l'environnement hôte Windows :
+
+* **Adresse IP hôte :** `10.20.142.215`
+* **Sous-réseau scanné :** `10.20.142.0/24`
+* **Commande exécutée :** `nmap -sn 10.20.142.0/24` (Ping Scan)
+* **Résultats :** 1 hôte actif identifié (`10.20.142.215`). Carte de topologie générée et exportée sous `Zenmap1.pdf`.
+
+<img width="960" height="1072" alt="Zenmap" src="https://github.com/user-attachments/assets/74349094-81d7-4824-aac0-0b412ab6c712" />
 
 ---
 
 ## 🔍 Module 3: Google Hacking & OSINT (W2-PM2)
-Reconnaissance using advanced Google Dorks operators and GHDB:
+Reconnaissance à l'aide des dorks Google avancés et de la base GHDB :
 
-1. **Admin Interfaces (`site:networkwalks.com inurl:admin OR inurl:login`):** 0 results found (No public admin portals exposed).
-2. **Exposed Documents (`site:networkwalks.com filetype:pdf`):** Identified 4 public PDF resources (ARP & SNMP Cheat Sheets).
-3. **Directory Listing (`site:networkwalks.com intitle:"index of"`):** 0 results found (Directory indexing disabled).
-4. **Sensitive Logs/Backups (`site:networkwalks.com ext:log OR ext:sql`):** 0 results found (No backup leaks detected).
-5. **GHDB Exploration:** Navigated Exploit-DB GHDB repository targeting vulnerable server categories.
+1. **Interfaces Admin (`site:networkwalks.com inurl:admin OR inurl:login`) :** 0 résultat (Aucun portail d'administration public exposé).
+2. **Documents Exposés (`site:networkwalks.com filetype:pdf`) :** 4 ressources PDF publiques identifiées (Cheat Sheets ARP & SNMP).
+3. **Listage de Répertoire (`site:networkwalks.com intitle:"index of"`) :** 0 résultat (Indexation des répertoires désactivée).
+4. **Logs / Sauvegardes Sensibles (`site:networkwalks.com ext:log OR ext:sql`) :** 0 résultat (Aucune fuite de sauvegarde détectée).
+5. **Exploration GHDB :** Navigation dans le dépôt Exploit-DB GHDB ciblant les catégories de serveurs vulnérables.
 
-*(Insérer ici vos captures d'écran Google Dorks)*
+*(voir Module3_W2_PM2)*
 
 ---
 
-## 🔧 Troubleshooting & Resolution
-* **DNS Resolution Error (`wafw00f`):** Encountered temporary `NameResolutionError` during Wafw00f execution due to transient network interface reset. 
-* **Resolution:** Re-attempted command execution after connection stabilization, successfully confirming ModSecurity WAF presence.
+## 🔧 Dépannage & Résolution
+* **Erreur de Résolution DNS (`wafw00f`) :** Erreur temporaire `NameResolutionError` rencontrée lors de l'exécution de Wafw00f en raison d'une réinitialisation éphémère de la carte réseau.
+* **Résolution :** Exécution de la commande relancée après stabilisation de la connexion, confirmant avec succès la présence du WAF ModSecurity.
