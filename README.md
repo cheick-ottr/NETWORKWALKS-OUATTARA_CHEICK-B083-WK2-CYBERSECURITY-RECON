@@ -17,7 +17,7 @@ Exécution de 6 commandes essentielles de reconnaissance contre `networkwalks.co
 * **Wafw00f (`wafw00f networkwalks.com`) :** Détection réussie du Pare-feu Applicatif Web (WAF) : **ModSecurity (SpiderLabs) WAF**.
 * **DNSRecon (`dnsrecon -d networkwalks.com`) :** Extraction des enregistrements SOA, serveurs de messagerie MX, règles SPF et enregistrements de service SRV cPanel.
 
-*(Voir Module1_W2-PM1)*
+*(Voir les captures ci-dessus)*
 
 ---
 
@@ -42,7 +42,7 @@ Reconnaissance à l'aide des dorks Google avancés et de la base GHDB :
 4. **Logs / Sauvegardes Sensibles (`site:networkwalks.com ext:log OR ext:sql`) :** 0 résultat (Aucune fuite de sauvegarde détectée).
 5. **Exploration GHDB :** Navigation dans le dépôt Exploit-DB GHDB ciblant les catégories de serveurs vulnérables.
 
-*(voir Module3_W2_PM2)*
+*(voir image_Module3)*
 
 ---
 
