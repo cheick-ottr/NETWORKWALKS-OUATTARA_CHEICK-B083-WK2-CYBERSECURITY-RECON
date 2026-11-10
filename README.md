@@ -42,7 +42,8 @@ Reconnaissance à l'aide des dorks Google avancés et de la base GHDB :
 4. **Logs / Sauvegardes Sensibles (`site:networkwalks.com ext:log OR ext:sql`) :** 0 résultat (Aucune fuite de sauvegarde détectée).
 5. **Exploration GHDB :** Navigation dans le dépôt Exploit-DB GHDB ciblant les catégories de serveurs vulnérables.
 
-*(voir image_Module3)*
+*(voir image_Module3 ci dessus)*
+<img width="1024" height="576" alt="image_module3 (2)" src="https://github.com/user-attachments/assets/9030db00-5d23-4231-a049-95e6c48e06d0" />
 
 ---
 
